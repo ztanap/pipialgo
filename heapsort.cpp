@@ -44,6 +44,7 @@ int MinHeap::pop() {
         if (cl == INT_MAX && cr == INT_MAX) break;   
 
         if(data[l] > min(cl, cr)) swap(data[l], cl < cr ? data[l*2] : data[l*2 + 1]);
+	else break;
         l = min(cl, cr);
     }
 
